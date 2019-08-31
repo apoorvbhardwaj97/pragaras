@@ -124,11 +124,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2565635456274744415, guid: e0dd597172543fa42bb80b7f1478b49a,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 2565635456274744401, guid: e0dd597172543fa42bb80b7f1478b49a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -183,16 +178,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2565635456274744414, guid: e0dd597172543fa42bb80b7f1478b49a,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1073512011
-      objectReference: {fileID: 0}
-    - target: {fileID: 2565635456274744414, guid: e0dd597172543fa42bb80b7f1478b49a,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0dd597172543fa42bb80b7f1478b49a, type: 3}
@@ -437,7 +422,7 @@ GameObject:
   - component: {fileID: 1150060340}
   m_Layer: 9
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -549,7 +534,7 @@ GameObject:
   - component: {fileID: 1265351235}
   m_Layer: 9
   m_Name: Platform (1)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
