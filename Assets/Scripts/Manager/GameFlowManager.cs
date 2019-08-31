@@ -41,11 +41,12 @@ public class GameFlowManager : Singleton<GameFlowManager>
     {
         //for dialoge you can just add bubble game obj on hero and villan and pass a string to show and trigger bubble
         Debug.Log("this is level 2");
+        Camera.main.transform.position += new Vector3(13f, 0, 0);
         ////
     }
     private void Scene3Triggered()
     {
-        Debug.Log("this is level 2");
+        Debug.Log("this is level 3");
         //////////
     }
     private void Scene4Triggered()
@@ -71,8 +72,8 @@ public class GameFlowManager : Singleton<GameFlowManager>
 
     public void TriggerNextScene()
     {
-        currentScene++;
-        switch (currentScene)
+        GameFlowManager.Instance.currentScene++;
+        switch (GameFlowManager.Instance.currentScene)
         {
             case 1:
                 {

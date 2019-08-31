@@ -6,7 +6,8 @@ public class EndTrigger : MonoBehaviour
 {
 
     #region ------------------------------------------Private Variables--------------------------------------------------------
-    [SerializeField] private GameFlowManager gameFlow;
+    [SerializeField] private Transform player = null;
+    [SerializeField] private Transform nextSpawn = null;
     #endregion ----------------------------------------------------------------------------------------------------------------
 
     #region ------------------------------------------Public Variables---------------------------------------------------------
@@ -19,7 +20,11 @@ public class EndTrigger : MonoBehaviour
     {
         if (other.name == "Player")
         {
-            gameFlow.TriggerNextScene();
+            GameFlowManager.Instance.TriggerNextScene();
+        }
+        if (player != null)
+        {
+            player.transform.position = nextSpawn.position;
         }
     }
 
