@@ -21,6 +21,7 @@ public class EndTrigger : MonoBehaviour
         if (other.name == "Player")
         {
             GameFlowManager.Instance.TriggerNextScene();
+            gameObject.SetActive(false);
         }
         if (player != null)
         {
