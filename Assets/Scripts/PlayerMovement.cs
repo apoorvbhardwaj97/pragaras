@@ -17,26 +17,27 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-
-        if (Input.GetButtonDown("Jump"))
+        if (GameFlowManager.Instance.freezeInput == false)
         {
-            jump = true;
-            animator.SetBool("IsJumping", true);
-        }
+            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-        if (Input.GetButtonDown("Crouch"))
-        {
-            crouch = true;
-        }
-        else if (Input.GetButtonUp("Crouch"))
-        {
-            crouch = false;
-        }
+            animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
+            if (Input.GetButtonDown("Jump"))
+            {
+                jump = true;
+                animator.SetBool("IsJumping", true);
+            }
+
+            if (Input.GetButtonDown("Crouch"))
+            {
+                crouch = true;
+            }
+            else if (Input.GetButtonUp("Crouch"))
+            {
+                crouch = false;
+            }
+        }
     }
 
     public void OnLanding()
@@ -51,17 +52,21 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Move our character
-        controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
-        jump = false;
+        if (GameFlowManager.Instance.freezeInput == false)
+        {
+            // Move our character
+            controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+            jump = false;
+        }
+
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-		// Debug.Log("COLLISION");
+        // Debug.Log("COLLISION");
         if (collision.gameObject.tag == "Platform")
         {
-			Debug.Log("Entered ground");
+            Debug.Log("Entered ground");
             animator.SetBool("IsJumping", false);
         }
 

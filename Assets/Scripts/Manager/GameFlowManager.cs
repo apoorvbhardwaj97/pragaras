@@ -12,6 +12,8 @@ public class GameFlowManager : Singleton<GameFlowManager>
 
     #region ------------------------------------------Public Variables---------------------------------------------------------
     public int currentScene = 0;
+    public bool freezeInput = false;
+    public float cameraLerpTime = 2f;
     #endregion ----------------------------------------------------------------------------------------------------------------
 
     #region ------------------------------------------Private Methods----------------------------------------------------------
@@ -41,7 +43,9 @@ public class GameFlowManager : Singleton<GameFlowManager>
     {
         //for dialoge you can just add bubble game obj on hero and villan and pass a string to show and trigger bubble
         Debug.Log("this is level 2");
-        Camera.main.transform.position += new Vector3(13f, 0, 0);
+
+        StartCoroutine(CameraLerp(Camera.main.transform.position, new Vector3(13f, 0, -10)));
+        // Camera.main.transform.position += new Vector3(13f, 0, 0);
         ////
     }
     private void Scene3Triggered()
@@ -64,6 +68,22 @@ public class GameFlowManager : Singleton<GameFlowManager>
     private void Scene7Triggered()
     {
 
+    }
+
+    private IEnumerator CameraLerp(Vector3 posA, Vector3 posB)
+    {
+        GameFlowManager.Instance.freezeInput = true;
+        float delta = 1f / cameraLerpTime;
+        float quad = 0;
+        while (quad < 1)
+        {
+            quad += delta;
+            Camera.main.transform.position = Vector3.Lerp(posA, posB, quad);
+            Debug.Log("Quad = "+quad);
+            yield return new WaitForFixedUpdate();
+        }
+        Debug.Log("Exit");
+        GameFlowManager.Instance.freezeInput = false;
     }
 
     #endregion ----------------------------------------------------------------------------------------------------------------
@@ -99,6 +119,7 @@ public class GameFlowManager : Singleton<GameFlowManager>
         }
 
     }
+
 }
 
 
