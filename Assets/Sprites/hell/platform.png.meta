@@ -1,17 +1,8 @@
 fileFormatVersion: 2
-guid: dae94c6ba24597146948fa575e4131e4
+guid: 1ab8905e5ff21e240b68367bc6851fc5
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Satan_0
-    21300002: Satan_1
-    21300004: Satan_2
-    21300006: Satan_3
-    21300008: Satan_4
-    21300010: Satan_5
-    21300012: Satan_6
-    21300014: Satan_7
-    21300016: SatanIdle_0
-    21300018: SatanIdle_1
+    21300000: platform_0
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -44,9 +35,9 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -100
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -105,13 +96,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SatanIdle_0
+      name: platform_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 256
-        width: 256
-        height: 256
+        x: 120
+        y: 48
+        width: 1360
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,27 +110,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7264143230e31eb49b8f79d117c3d92c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SatanIdle_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f4a137a3a3d9784d920cf4dcaa81d00
+      spriteID: 9167ebff508c1f54b9248ab562129ad2
       vertices: []
       indices: 
       edges: []
@@ -147,7 +118,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 765994888ed92ef4dbfb60988eba3d34
+    spriteID: d5229d362f170eb488f69a5e52c5d24c
     vertices: []
     indices: 
     edges: []
