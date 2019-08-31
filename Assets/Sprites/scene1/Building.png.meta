@@ -3,6 +3,7 @@ guid: 8527a0559dcc51f43b3dc38cb74a0048
 TextureImporter:
   fileIDToRecycleName:
     21300000: Building_0
+    21300002: Building_1
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -104,13 +105,33 @@ TextureImporter:
         width: 682
         height: 693
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 81aa4055d97aad2439c8403fefc37053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Building_1
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 219
+        width: 172
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc8819f7b9822f94e8a429d182ea3391
       vertices: []
       indices: 
       edges: []
