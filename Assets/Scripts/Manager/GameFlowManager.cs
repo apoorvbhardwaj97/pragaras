@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameFlowController : MonoBehaviour
+public class GameFlowManager : Singleton<GameFlowManager>
 {
 
     #region ------------------------------------------Private Variables--------------------------------------------------------
@@ -25,16 +25,6 @@ public class GameFlowController : MonoBehaviour
 
     }
 
-    #endregion ----------------------------------------------------------------------------------------------------------------
-
-    #region ------------------------------------------Public Methods-----------------------------------------------------------    
-
-    public void TriggerNextScene()
-    {
-        currentScene++;
-        Invoke("Scene" + currentScene + "Triggered", 0f);
-    }
-
     private void Scene1Triggered()
     {
         //triggre these from the end point gameobject 2d cllision trigger
@@ -47,7 +37,6 @@ public class GameFlowController : MonoBehaviour
     {
         //for dialoge you can just add bubble game obj on hero and villan and pass a string to show and trigger bubble
         Debug.Log("this is level 2");
-
     }
     private void Scene3Triggered()
     {
@@ -69,6 +58,41 @@ public class GameFlowController : MonoBehaviour
     {
 
     }
+
+    #endregion ----------------------------------------------------------------------------------------------------------------
+
+    #region ------------------------------------------Public Methods-----------------------------------------------------------    
+
+    public void TriggerNextScene()
+    {
+        currentScene++;
+        switch (currentScene)
+        {
+            case 1:
+                {
+                    Scene1Triggered();
+                }
+                break;
+            case 2:
+                {
+                    Scene2Triggered();
+                }
+                break;
+            case 3:
+                {
+                    Scene3Triggered();
+                }
+                break;
+            case 4:
+                {
+                    Scene4Triggered();
+                }
+                break;
+
+        }
+    }
+
+
     #endregion ----------------------------------------------------------------------------------------------------------------
 
 }
