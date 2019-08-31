@@ -18,31 +18,35 @@ public class GameFlowManager : Singleton<GameFlowManager>
 
     private void Start()
     {
-        TriggerNextScene();
+        Scene0Triggered();
     }
 
-    private void Update()
+
+    public void Scene0Triggered()
     {
-
+        //triggre these from the end point gameobject 2d cllision trigger
+        //change cam postion fade in fade out , start things in scene etc
+        Debug.Log("this is level 0");
+        SceneManager.LoadScene(0);
     }
 
-    private void Scene1Triggered()
+    public void Scene1Triggered()
     {
         //triggre these from the end point gameobject 2d cllision trigger
         //change cam postion fade in fade out , start things in scene etc
         Debug.Log("this is level 1");
-        SceneManager.LoadScene(0);
-
+        SceneManager.LoadScene(1);
     }
-
     private void Scene2Triggered()
     {
         //for dialoge you can just add bubble game obj on hero and villan and pass a string to show and trigger bubble
         Debug.Log("this is level 2");
+        ////
     }
     private void Scene3Triggered()
     {
-
+        Debug.Log("this is level 2");
+        //////////
     }
     private void Scene4Triggered()
     {
@@ -92,9 +96,9 @@ public class GameFlowManager : Singleton<GameFlowManager>
                 break;
 
         }
+
     }
-
-
-    #endregion ----------------------------------------------------------------------------------------------------------------
-
 }
+
+
+#endregion ----------------------------------------------------------------------------------------------------------------

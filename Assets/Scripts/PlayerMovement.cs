@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-		Debug.Log("COLLISION");
+		// Debug.Log("COLLISION");
         if (collision.gameObject.tag == "Platform")
         {
 			Debug.Log("Entered ground");
