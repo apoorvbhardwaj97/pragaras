@@ -17,7 +17,7 @@ public class EndTrigger : MonoBehaviour
 
     void OnTriggerEnter2d(Collider2D other)
     {
-        if (other.name == "player")
+        if (other.name == "Player")
         {
             gameFlow.TriggerNextScene();
         }

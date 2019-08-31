@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameFlowManager : Singleton<GameFlowManager>
 {
@@ -30,7 +31,8 @@ public class GameFlowManager : Singleton<GameFlowManager>
         //triggre these from the end point gameobject 2d cllision trigger
         //change cam postion fade in fade out , start things in scene etc
         Debug.Log("this is level 1");
-        TriggerNextScene();
+        SceneManager.LoadScene(0);
+
     }
 
     private void Scene2Triggered()
